@@ -1,0 +1,508 @@
+/*NAV BAR*/
+ul {
+    width: auto;
+    height: 11%;
+    background-color: #383434;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    width: 10%;
+    height: 3%;
+    font-family: HelveticaNeue;
+    font-size: 1.5vw;
+    font-weight: thin;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fdfdfd;
+    text-decoration: none;
+
+}
+
+.iosRemote {
+    position: absolute;
+    left: 25%;
+    top: 5%;
+}
+
+.about {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+}
+
+.trial {
+    position: absolute;
+    left: 75%;
+    top: 5%;
+}
+
+
+li a:hover {
+    color: gainsboro;
+}
+
+.logo {
+    width: 3%;
+    position: absolute;
+    top: 3.5%;
+    left: 6%;
+}
+
+/*INFO*/
+
+.info {
+    width: 100%;
+    height: 20%;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #f7f7f7;
+}
+
+.info-text1 {
+    font-family: HelveticaNeue;
+    font-size: 4vw;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.24;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262626;
+    position: absolute;
+    left: 5%;
+    top: 17%;
+}
+
+.info-text2 {
+    font-family: HelveticaNeue;
+    font-size: 1.8vw;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #262626;
+    position: absolute;
+    left: 5%;
+    top: 24.5%;
+}
+
+/*VIDEO*/
+
+.vidcont {
+    width: 100%;
+    height: auto;
+}
+
+#westworld {
+    width: 100%;
+}
+
+.tv {
+    width: 100%;
+}
+
+/*PLAYER*/
+#playerbox {
+    width: 200px;
+    height: 300px;
+    opacity: 0.7;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #E5E7EA;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    border-radius: 10px;
+}
+
+#playerbox:hover {
+    width: 200px;
+    height: 300px;
+    opacity: 0.9;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color:#E5E7EA;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    border-radius: 10px;
+}
+
+.vidTitle {
+  width: 80px;
+  height: 12px;
+  font-family: HelveticaNeue;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #000000;
+  position:absolute;
+  left: 29%;
+  top: 2.5%;
+}
+
+.vidCap {
+  width: 80px;
+  height: 9px;
+  font-family: HelveticaNeue;
+  font-size: 8px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #908F8F;
+  position:absolute;
+  left: 29%;
+  top: 6.5%;
+}
+
+/*VID NAV*/
+
+.play {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    position: absolute;
+    top: 28.3%;
+    left: 38.1%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+     border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.play-img {
+    width: 30%;
+    position: absolute;
+    top: 32.5%;
+    left: 37.8%;
+}
+
+.rem-nav {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 26.8%;
+    top: 21%;
+}
+
+#left {
+    width: 25px;
+    height: 49px;
+    position: absolute;
+    left: 26%;
+    top: 27%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#right {
+    width: 25px;
+    height: 49px;
+    position: absolute;
+    left: 60%;
+    top: 27%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+/*VOLUME*/
+
+
+#volume {
+    -webkit-appearance: none !important;
+    width: 130px;
+    height: 2.3px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 17%;
+    top: 59%;
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 12.9px;
+    height: 12.9px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 100;
+    cursor: pointer;
+}
+
+/*TIMEFRAME*/
+
+
+#seek-bar {
+    -webkit-appearance: none !important;
+    width: 165px;
+    height: 2.3px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 12%;
+    left: 9%;
+}
+
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 7px;
+    height: 7px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 100;
+    cursor: pointer;
+}
+
+#seek-bar::-webkit-slider-thumb:hover {
+    width: 12.9px;
+    height: 12.9px;
+}
+
+
+ .time{
+  width: 14px;
+  height: 7px;
+  font-family: HelveticaNeue;
+  font-size: 7px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+/*ICONS*/
+
+.power{
+  width: 10px;
+  position: absolute;
+  top:4%;
+  left: 7.5%;
+}
+
+.search{
+  width: 11px;
+  position: absolute;
+  top:4%;
+  right: 7.5%;  
+}
+
+.soundLOW{
+  width: 5px;
+  position:absolute;
+  left:11.9%;
+  top: 58.8%;
+}
+
+.soundHIGH{
+  width: 8px;
+  position:absolute;
+  right:9.5%;
+  top: 58.8%;
+}
+
+.b-arrow {
+  width: 6.4px;
+  height: 14.6px;
+  position: absolute;
+  bottom: 14%;
+  left: 7%;
+  opacity: 0.5%;
+}
+
+.settings{
+   width: 13px;
+  position: absolute;
+  bottom: 14.5%;
+  right: 8%;
+  opacity: 0.5%;  
+}
+
+.airplay{
+    width: 9.5px;
+  position: absolute;
+  bottom: 3.5%;
+  left: 11%;
+  opacity: 0.2%; 
+}
+
+.d-arrow {
+  width: 4px;
+  height: 14.6px;
+  position: absolute;
+  bottom: 3%;
+  right: 8%;
+  opacity: 0.5%;
+  transform: rotate(270deg);
+}
+
+/*DUMMY BUTTON*/
+
+.language {
+  width: 50.8px;
+  height: 19.9px;
+  opacity: 0.9;
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #48484b;
+  position: absolute;
+  bottom: 25%;
+  left:7%;
+}
+
+.language-text {
+   width: 50px;
+  height: 12px;
+  font-family: HelveticaNeue;
+  font-size: 7.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #fff;
+  position:absolute;
+  top:26.5%;
+}
+
+.caption {
+  width: 50.8px;
+  height: 19.9px;
+  opacity: 0.9;
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #48484b;
+  position: absolute;
+  bottom: 25%;
+  left:37%;
+}
+
+.caption-text {
+   width: 50px;
+  height: 12px;
+  font-family: HelveticaNeue;
+  font-size: 7.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #fff;
+  position:absolute;
+  top:26.5%;
+}
+
+.deviceapp {
+  width: 50.8px;
+  height: 19.9px;
+  opacity: 0.9;
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #48484b;
+  position: absolute;
+  bottom: 25%;
+  right:7%;
+}
+
+.deviceapp-text {
+   width: 51px;
+  height: 12px;
+  font-family: HelveticaNeue;
+  font-size: 7.5px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #fff;
+  position:absolute;
+  top:26.5%;
+}
+
+/*BOTTOM*/
+
+.dline {
+  width: 200px;
+  height: 0.8px;
+  opacity: 0.2;
+  background-color: #000000;
+  position: absolute;
+  bottom:10%;
+}
+
+.np {
+  width: 78px;
+  height: 12px;
+  opacity: 0.5;
+  font-family: HelveticaNeue;
+  font-size: 9px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+  position: absolute;
+  bottom: 3%;
+  left: 22%;
+}
+
+.device {
+  width: 78px;
+  height: 12px;
+  font-family: HelveticaNeue;
+  font-size: 9px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #000000;
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+}
+
+.more {
+  width: 74.3px;
+  height: 6.8px;
+  opacity: 0.9;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -5%;
+  left:31.5%;
+}

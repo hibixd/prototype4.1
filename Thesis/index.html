@@ -1,0 +1,189 @@
+<!doctyle html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>iOS Remote</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!--NAV BAR-->
+        <ul>
+            <!--LOGO-->
+            <div class="logo"><img src="images/logo.svg"></div>
+
+            <!--LIST-->
+            <li><a href="#home" class="iosRemote">iOS Remote</a></li>
+            <li><a href="#about" class="about">About</a></li>
+            <li><a href="#trial" class="trial">Trial</a></li>
+        </ul>
+
+        <!--INFO-->
+        <div class="info">
+            <div class="info-text1">Try it out.</div>
+            <div class="info-text2">Play with the video controls: play, pause, fast forward, rewind, and volume control.</div>
+        </div>
+        <!--VIDEO-->
+        <div class="vidcont">
+            <video id="westworld" width=100%>
+                <source src="images/testvid.mp4" type="video/mp4">
+            </video>
+
+            <!--PLAYER-->
+
+            <div id="playerbox">
+               
+                <!--TOP BAR-->
+                
+                <div class="vidTitle">Westworld Trailer</div>
+                
+                <div class="vidCap">Season 2</div>
+                
+                <div class="power"><img src="images/power.svg"></div>
+                
+                <div class="search"><img src ="images/search.svg"></div>
+
+                <!--TIMEFRAME-->
+
+                <input type="range" id="seek-bar" value="0">
+                
+                <!--VIDEO NAV-->
+
+
+                <div class="rem-nav">
+                    <img src="images/nav.svg">
+                </div>
+                <button id="left" onclick="goBack()"></button>
+
+                <button id="right" onclick="goForward()"></button>
+
+
+                <button class="play" onclick="playPause()">
+                    <div class="play-img"><img src="images/play.svg"></div>
+                </button>
+
+
+                <!--VOLUME-->
+
+                <input id="volume" type="range">
+                
+                <div class="soundLOW"><img src="images/vollow.svg"></div>
+                
+                <div class="soundHIGH"><img src="images/volhigh.svg"></div>
+                <!--BOTTOM BUTTONS-->
+                
+                <div class="language"><div class="language-text">Language</div></div>
+                <div class="caption"><div class="caption-text">Captions</div></div>
+                <div class="deviceapp"><div class="deviceapp-text">Device Apps</div></div>
+                
+                <div class="b-arrow"><img src="images/arrow.svg"></div>
+                
+                <div class="settings"><img src="images/settings.svg"></div>
+                
+                <div class="dline"></div>
+                
+                <div class="airplay"><img src="images/airplay.svg"></div>
+                
+                <div class="np">Now Playing On</div>
+                
+                <div class="device">SMART TV</div>
+                
+                <div class="d-arrow"><img src="images/arrow.svg"></div>
+                
+                <div class="more"></div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        var myVideo = document.getElementById("westworld");
+        var rewinding = false;
+        var fastforwading = false;
+
+        function playPause() {
+            console.log("playpause");
+            if (myVideo.paused) {
+                myVideo.play();
+                console.log("play");
+            } else {
+                myVideo.pause();
+                console.log("pause");
+            };
+
+        }
+
+        function goBack() {
+            if (!rewinding) {
+                rewinding = true;
+                intervalRewind = setInterval(function() {
+                    myVideo.playbackRate = 1.0;
+                    if (myVideo.currentTime == 0) {
+                        clearInterval(intervalRewind);
+                        myVideo.pause();
+                    } else {
+                        myVideo.currentTime += -.01;
+                    }
+                }, 25);
+
+            } else {
+                clearInterval(intervalRewind);
+                rewinding = false;
+            }
+        }
+
+        function goForward() {
+            if (!fastforwading) {
+                fastforwading = true;
+                myVideo.playbackRate = 2.0;
+            } else {
+
+                myVideo.playbackRate = 1.0;
+                fastforwading = false;
+            }
+        }
+
+        //PROGRESS BAR
+
+        var seekBar = document.getElementById("seek-bar");
+
+        // Event listener for the seek bar
+        seekBar.addEventListener("change", function() {
+            // Calculate the new time
+            var time = myVideo.duration * (seekBar.value / 100);
+
+            // Update the video time
+            myVideo.currentTime = time;
+        });
+
+        // Update the seek bar as the video plays
+        myVideo.addEventListener("timeupdate", function() {
+            // Calculate the slider value
+            var value = (100 / myVideo.duration) * myVideo.currentTime;
+
+            // Update the slider value
+            seekBar.value = value;
+        });
+
+        // Pause the video when the slider handle is being dragged
+        seekBar.addEventListener("mousedown", function() {
+            myVideo.pause();
+        });
+
+        // Play the video when the slider handle is dropped
+        seekBar.addEventListener("mouseup", function() {
+            myVideoideo.play();
+        });
+        
+
+        //VOLUME
+
+        var progress = document.querySelector("volume");
+
+        volume.addEventListener("change", function(e) {
+            myVideo.volume = e.currentTarget.value / 100;
+        });
+    </script>
+
+    </html>
